@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  pricing-service:
+    image: pricing-service
+    build: ./pricing-service
+    environment:
+      - COINAPI_API_KEY_FILE= /run/secretes/coinapi_api_key
+    secrets:
+      - coinapi_api_key
+
+secrets:
+  coinapi_api_key:
+    external: true
