@@ -1,2 +1,2 @@
-# go_challenge_pricing_service
+# go-challenge-pricing-service
 Repository to do https://github.com/glassnode/code-challenges/blob/master/software-engineer-challenge.md challenge using Go and Docker
