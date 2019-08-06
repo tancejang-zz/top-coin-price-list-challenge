@@ -11,7 +11,9 @@ func main() {
 
 	http.HandleFunc("/info", controller.GetPriceInfo)
 
+	// Starting the server
+
 	log.Println("Starting Server")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	defer log.Fatal(http.ListenAndServe(":8080", nil))
 
 }

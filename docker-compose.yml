@@ -4,10 +4,4 @@ services:
     image: pricing-service
     build: ./pricing-service
     environment:
-      - COINAPI_API_KEY_FILE= /run/secretes/coinapi_api_key
-    secrets:
-      - coinapi_api_key
-
-secrets:
-  coinapi_api_key:
-    external: true
+      - COINAPI_API_KEY=A1269882-C37A-49A8-9413-270B3E2FDC5B

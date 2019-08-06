@@ -10,9 +10,13 @@ import (
 
 // GetPriceInfo is a controller that handle all request related to /info path
 func GetPriceInfo(w http.ResponseWriter, r *http.Request) {
-	result, err := accessor.GetPricingInfo()
-	if err != nil {
-		log.Fatal(err)
+	if r.Method == "POST" {
+		result, err := accessor.GetPricingInfo()
+		defer fmt.Fprintf(w, result.String())
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		http.Error(w, "404 page not found", http.StatusNotFound)
 	}
-	fmt.Fprintf(w, result)
 }
