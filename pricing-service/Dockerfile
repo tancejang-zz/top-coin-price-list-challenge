@@ -14,7 +14,7 @@ ADD . /app
 WORKDIR /app
 
 # Dependencies list to be installed
-RUN go get -v gopkg.in/resty.v0
+#RUN go get -v gopkg.in/resty.v0
 
 # we run go build to compile the binary
 # executable of our Go program

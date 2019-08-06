@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/tancejang/go_challenge_pricing_service/pricing-service/controller"
+	"github.com/tancejang/top-coin-price-list-challenge/pricing-service/controller"
 )
 
 func main() {

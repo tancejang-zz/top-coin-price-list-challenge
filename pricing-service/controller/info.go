@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/tancejang/go_challenge_pricing_service/pricing-service/accessor"
+	"github.com/tancejang/top-coin-price-list-challenge/pricing-service/accessor"
 )
 
 // GetPriceInfo is a controller that handle all request related to /info path
@@ -14,5 +14,5 @@ func GetPriceInfo(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Fprintf(w, result.String())
+	fmt.Fprintf(w, result)
 }
