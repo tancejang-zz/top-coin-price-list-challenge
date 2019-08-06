@@ -8,7 +8,7 @@ if [ "$1" != "" ] && [ "$2" != "" ]; then
         sudo docker build -t "$directory_name" .
     fi
     if [ "$1" = "run" ]; then
-        sudo docker run -p "$PORT":"$DOCKER_PORT" -it "$directory_name"
+        sudo docker-compose up
     fi
 else
     echo "Please specify whether you want to build or run."
