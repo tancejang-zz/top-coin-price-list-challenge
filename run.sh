@@ -1,6 +1,4 @@
 #!/bin/bash
-PORT=8080
-DOCKER_PORT=8081
 if [ "$1" != "" ] && [ "$2" != "" ]; then
     directory_name="$2"
     cd "$directory_name"
